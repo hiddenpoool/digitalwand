@@ -10,12 +10,13 @@
 
 
 def flat_list(array):
-    s=[]
-    for lst in array:
-        for el in lst:
-            s.append(el)
-    print(s)
-    return s
+    count = []
+    for obj in array:
+        if type(obj) is list:
+            count.extend(flat_list(obj))
+        else:
+            count.append(obj)
+    return count
 
 
 if __name__ == "__main__":
@@ -24,4 +25,4 @@ if __name__ == "__main__":
     assert flat_list([[[2]], [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7], "Nested"
     assert flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1], "In In"
 
-print("complete")
+    print("complete")

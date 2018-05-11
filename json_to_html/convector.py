@@ -2,8 +2,6 @@ import json
 b = {
     'title': '<h1>%s</h1>',
     'body': '<p>%s</p>',
-    'h3': '<h3>%s</h3>',
-    'div': '<div>%s</div>'
 
 }
 def main():
@@ -17,7 +15,7 @@ def main():
             if p in b.keys():
                 a = a + b[p] % i[p]
     print(a)
-    print('<h3>Title #1</h3><div>Hello, World 1!</div>' == a)
+    print('<h1>Title #1</h1><p>Hello, World 1!</p><h1>Title #2</h1><p>Hello, World2!</p>' == a)
 
     return 0
 

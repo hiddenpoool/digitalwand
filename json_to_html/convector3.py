@@ -5,12 +5,6 @@ def abc(arg):
         a += '<%s>%s</%s>' % ( p, arg[p], p)
     return a
 
-def pars(arg):
-    a = ''
-    for  i in arg:
-        for p in i.keys():
-            a = '%s<%s>%s</%s>' % (a, p, i[p], p)
-    return a
 
 def pars1(arg, rrr):
     a = ''
